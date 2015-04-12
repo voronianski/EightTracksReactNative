@@ -15,7 +15,8 @@ var {
   Image,
   Text,
   StatusBarIOS,
-  PixelRatio
+  PixelRatio,
+  TouchableHighlight
 } = React;
 
 class Landing extends React.Component {
@@ -27,12 +28,30 @@ class Landing extends React.Component {
         );
     }
 
+    showLoginModal() {
+        console.log('modal will be shown');
+    }
+
     render() {
         return (
             <View style={styles.page}>
                 <Image style={styles.bg} source={require('image!bg-568')}>
                     <Image style={styles.logo} source={require('image!logo')} />
-                    <EffectsView style={styles.bottomNote} blurStyle="light" vibrantContent={(() => this.renderBottomText())()} />
+                    <TouchableHighlight
+                        style={styles.loginBlock}
+                        onPress={this.showLoginModal.bind(this)}
+                        underlayColor="#182144"
+                        activeOpacity={0.5}
+                    >
+                        <Image style={styles.loginBg} source={require('image!login-btn')}>
+                            <Text style={styles.loginText}>Use 8tracks Account</Text>
+                        </Image>
+                    </TouchableHighlight>
+                    <EffectsView
+                        style={styles.bottomNote}
+                        blurStyle="light"
+                        vibrantContent={this.renderBottomText.call(this)}
+                    />
                 </Image>
             </View>
         );
@@ -80,7 +99,24 @@ var styles = StyleSheet.create({
     logo: {
         width: 110 * PixelRatio.get(),
         height: 43 * PixelRatio.get(),
-        marginTop: -120,
+        marginTop: -150,
+    },
+    loginBlock: {
+        position: 'absolute',
+        bottom: 60,
+        left: 0,
+        right: 0,
+        height: 50,
+    },
+    loginBg: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    loginText: {
+        color: 'white',
+        fontSize: 18,
+        fontFamily: 'ProximaNova-Regular'
     },
     bottomNote: {
         position: 'absolute',
@@ -94,7 +130,8 @@ var styles = StyleSheet.create({
     },
     bottomNoteText: {
         color: 'white',
-        fontSize: 13,
+        fontSize: 14,
+        fontFamily: 'ProximaNova-Regular',
         textAlign: 'center',
         marginLeft: 60,
         marginRight: 60

@@ -23,6 +23,7 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		2AF9ADC31ADAE52F008BFE2D /* DVEffectsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF9ADC01ADAE52F008BFE2D /* DVEffectsView.m */; };
 		2AF9ADC41ADAE52F008BFE2D /* DVEffectsViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF9ADC21ADAE52F008BFE2D /* DVEffectsViewManager.m */; };
+		2AF9ADD11ADAEBA2008BFE2D /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AF9ADD01ADAEBA2008BFE2D /* ProximaNova-Regular.otf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,7 @@
 		2AF9ADC01ADAE52F008BFE2D /* DVEffectsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVEffectsView.m; sourceTree = "<group>"; };
 		2AF9ADC11ADAE52F008BFE2D /* DVEffectsViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVEffectsViewManager.h; sourceTree = "<group>"; };
 		2AF9ADC21ADAE52F008BFE2D /* DVEffectsViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVEffectsViewManager.m; sourceTree = "<group>"; };
+		2AF9ADD01ADAEBA2008BFE2D /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +199,7 @@
 		13B07FAE1A68108700A75B9A /* EightTracksReact */ = {
 			isa = PBXGroup;
 			children = (
+				2AF9ADCE1ADAEB4D008BFE2D /* Resources */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -226,6 +229,22 @@
 			);
 			name = DVEffects;
 			path = "node_modules/react-native-effects-view/DVEffects";
+			sourceTree = "<group>";
+		};
+		2AF9ADCE1ADAEB4D008BFE2D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2AF9ADCF1ADAEB61008BFE2D /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2AF9ADCF1ADAEB61008BFE2D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2AF9ADD01ADAEBA2008BFE2D /* ProximaNova-Regular.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -430,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				008F07F31AC5B25A0029DE68 /* main.jsbundle in Resources */,
+				2AF9ADD11ADAEBA2008BFE2D /* ProximaNova-Regular.otf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
